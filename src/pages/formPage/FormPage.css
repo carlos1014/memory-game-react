@@ -1,0 +1,9 @@
+.logo_game{
+    display: table;
+    margin: 0 auto;
+}
+h2{
+    text-align: center;
+    color: white;
+    padding-bottom: 20px;
+}

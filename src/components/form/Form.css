@@ -1,0 +1,36 @@
+.containerForm form{
+    display: table;
+    margin: 0 auto;
+}
+.inputCustom{
+    border: 3px solid white;
+    background-color: #777;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    display: table;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ddd;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ddd;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ddd;
+  }
+
+  .btnCustom{
+    color:white;
+    font-size: 20px;
+    font-weight: 600;
+    display: table;
+    margin: 20px auto;
+    padding: 10px 30px;
+  }

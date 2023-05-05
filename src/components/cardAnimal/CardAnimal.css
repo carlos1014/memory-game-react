@@ -1,0 +1,25 @@
+.cardContainer .img_animal{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 25px;
+    transform: rotateY(90deg);
+    transition: all ease-in 0.2s;
+    position: absolute;
+}
+
+.flipCard .img_animal{
+    transform: rotateY(0deg);
+    transition-delay: 0.2s;
+}
+
+.cardContainer .img_interrogation{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 25px;
+}
+
+.flipCard .img_interrogation{
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+    margin-bottom: 25px;
+}
