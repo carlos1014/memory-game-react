@@ -1,11 +1,14 @@
-import useAxios from "../services/AnimalServices";
+import useAxios from "../../services/AnimalServices";
 import { useEffect, useState } from "react";
-import CardAnimal from "./cardAnimal/CardAnimal";
+import CardAnimal from "../cardAnimal/CardAnimal";
+import "./Animals.css"
+
+const QUANTITY_IMAGE = 12;
 
 const Animals  = () => {
     const { response } = useAxios({
       method: "get",
-      url: `/?per_page=8`,
+      url: `/?per_page=${QUANTITY_IMAGE}`,
       headers: {
         accept: '*/*'
       }
@@ -53,6 +56,10 @@ const Animals  = () => {
               if (card.src === selectOne.src) {
                 setSuccess(success + 1)
                 setTurns(turns)
+                console.log(success)
+                  if ((success + 1) === QUANTITY_IMAGE) {
+                    alert("termino");
+                  }
                 return {...card, selection: true}
               } else {
                 return card
@@ -67,10 +74,21 @@ const Animals  = () => {
       }
     }, [selectOne, selectTwo])
   
-    console.log('new listCards', listCards)
+    //console.log('new listCards', listCards)
     return (
       <>
-      <div>IMAGENES</div>
+          <div className="container-fluid counter">
+            <div className='container infoCounter'>
+              <div className='container_success'>
+                <div className='tit_success'>ACIERTOS:</div>
+                <div className='value_success'>{success}</div>
+              </div>
+              <div className='container_fails'>
+                <div className='tit_fails'>FALLOS:</div>
+                <div className='value_fails'>{turns}</div>
+              </div>                
+            </div>  
+          </div>
           <div className="container">
             <div className="row">
               {
@@ -86,8 +104,6 @@ const Animals  = () => {
                 }
             </div> 
           </div> 
-          <div>ERRORES:{turns}</div>
-          <div>ACIERTOS:{success}</div>
       </>
     )
   }

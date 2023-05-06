@@ -1,10 +1,36 @@
+.cardContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Float */
+.hvr-float {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-float:hover, .hvr-float:focus, .hvr-float:active {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
 .cardContainer .img_animal{
     width: 200px;
-    height: 200px;
+    height: 250px;
     margin-bottom: 25px;
     transform: rotateY(90deg);
     transition: all ease-in 0.2s;
     position: absolute;
+    border-radius: 6px !important;
+    border: 5px solid white;
 }
 
 .flipCard .img_animal{
@@ -14,8 +40,10 @@
 
 .cardContainer .img_interrogation{
     width: 200px;
-    height: 200px;
+    height: 250px;
     margin-bottom: 25px;
+    border-radius: 6px !important;
+    border: 5px solid white;
 }
 
 .flipCard .img_interrogation{
