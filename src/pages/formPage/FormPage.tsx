@@ -11,7 +11,7 @@ export const FormPage = () => {
   return (
     <div className='container'>
       <img src={logo_game} className="logo_game" alt="logo_game" /> 
-      <h2>Ingresa tu nombre para iniciar el juego </h2> 
+      <h2 className='txtName--begin'>Ingresa tu nombre para iniciar el juego </h2> 
       <Form />
     </div>
   )

@@ -5,7 +5,15 @@ import "./Animals.css"
 
 const QUANTITY_IMAGE = 12;
 
-const Animals  = () => {
+export type Props = {
+  onHandleShowModal?: () => void;
+};
+
+const Animals  = (props: Props) => {
+  const {
+    onHandleShowModal
+  } = props;
+
     const { response } = useAxios({
       method: "get",
       url: `/?per_page=${QUANTITY_IMAGE}`,
@@ -21,7 +29,7 @@ const Animals  = () => {
     const [disabled, setDisabled] = useState(false);
     const [turns, setTurns] = useState(0);
     const [success, setSuccess] = useState(0);
-
+    
     const handleSelect = (card: any) => {
       selectOne ? setSelectTwo(card as any) : setSelectOne(card as any)
     }
@@ -58,7 +66,7 @@ const Animals  = () => {
                 setTurns(turns)
                 console.log(success)
                   if ((success + 1) === QUANTITY_IMAGE) {
-                    alert("termino");
+                    onHandleShowModal?.();
                   }
                 return {...card, selection: true}
               } else {
@@ -74,7 +82,6 @@ const Animals  = () => {
       }
     }, [selectOne, selectTwo])
   
-    //console.log('new listCards', listCards)
     return (
       <>
           <div className="container-fluid counter">
