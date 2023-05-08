@@ -1,0 +1,11 @@
+.logo_game{
+    display: table;
+    margin: 0 auto;
+}
+
+.txtName--begin{
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    margin: 0px auto 40px auto;
+}

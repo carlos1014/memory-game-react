@@ -1,0 +1,36 @@
+.counter{
+    background: #008DA6;
+}
+
+.container_success, .container_fails{
+    color:white;
+    font-size:20px;
+    display: flex;
+    margin-left: 20px;
+}
+
+.tit_success{
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+.value_success{
+    font-weight: 900;
+
+}
+.value_fails{
+    font-weight: 900;
+}
+
+.tit_fails{
+    margin-right: 5px;
+    font-weight: 500;   
+}
+
+.infoCounter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin-bottom: 50px;
+}

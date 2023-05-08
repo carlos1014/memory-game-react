@@ -1,0 +1,23 @@
+.top_name{
+    background-color: #CACACA;
+}
+
+.info_top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.txt_hi{
+    margin-right: 5px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.txt_name{
+    color: #008DA6;
+    font-weight: 900;
+    text-transform: uppercase;
+}
