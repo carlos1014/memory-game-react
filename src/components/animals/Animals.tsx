@@ -64,7 +64,6 @@ const Animals  = (props: Props) => {
               if (card.src === selectOne.src) {
                 setSuccess(success + 1)
                 setTurns(turns)
-                console.log(success)
                   if ((success + 1) === QUANTITY_IMAGE) {
                     onHandleShowModal?.();
                   }
