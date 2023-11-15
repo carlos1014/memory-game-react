@@ -1,4 +1,4 @@
-import useAxios from "../../services/AnimalServices";
+import useAxios from "../../hook/useAxios";
 import { useEffect, useState } from "react";
 import CardAnimal from "../cardAnimal/CardAnimal";
 import "./Animals.css"
@@ -16,16 +16,20 @@ const Animals  = (props: Props) => {
 
     const { response } = useAxios({
       method: "get",
-      url: `/?per_page=${QUANTITY_IMAGE}`,
+      url: `/character`,
       headers: {
         accept: '*/*'
       }
     });
 
     const [listPhoto, setListPhoto] = useState<any>();
-    const [listCards, setListCards] = useState([]);
+    console.log("listPhoto", listPhoto)
+    const [listCards, setListCards] = useState<any>();
+    console.log("listCards", listCards)
     const [selectOne, setSelectOne] = useState<any>();
+    console.log("selectOne", selectOne)
     const [selectTwo, setSelectTwo] = useState<any>();
+    console.log("selectTwo", selectTwo)
     const [disabled, setDisabled] = useState(false);
     const [turns, setTurns] = useState(0);
     const [success, setSuccess] = useState(0);
@@ -42,11 +46,11 @@ const Animals  = (props: Props) => {
     }
 
     useEffect(()=>{
-      setListPhoto(response?.data.entries);
+      setListPhoto(response?.data.results.slice(0,QUANTITY_IMAGE));
       if (listPhoto) {
         const loadCard = [...listPhoto, ...listPhoto]
         .sort(() => Math.random() - 0.5)
-        .map((card) => ({ selection:false, src:card.fields.image.url, id: Math.random()}))
+        .map((card) => ({ selection:false, src:card.image, id: Math.random()}))
         setListCards(loadCard as [])
         setTurns(0)
         setSuccess(0)

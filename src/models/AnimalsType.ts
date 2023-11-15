@@ -1,3 +1,15 @@
+export interface ListCards {
+    selection: boolean;
+    src: string;
+    id: number;
+}
+
+export interface ListPhoto {
+    fields: Fields;
+    src: string;
+    id: number;
+}
+
 export interface Data {
     entries: Entries[];
     meta: Meta[];
