@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 
-axios.defaults.baseURL = 'https://rickandmortyapi.com/api';
+axios.defaults.baseURL = process.env.REACT_APP_API;
 
 const useAxios = (axiosParams: AxiosRequestConfig) => {
   const [response, setResponse] = useState<AxiosResponse>();
