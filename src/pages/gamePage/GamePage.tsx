@@ -35,7 +35,7 @@ const GamePage = (props: Props) => {
   const [nameUserPrint, setNameUserPrint] = useState("");
   const [showModal, setShowModal] = useState(false);
 
-  const handleShowModal = () => {
+  const onHandleShowModal = () => {
     setShowModal(true);
   };
 
@@ -49,7 +49,7 @@ const GamePage = (props: Props) => {
       navigate.push("/game");
       setNameUserPrint(nameUser);
     } else navigate.push("/");
-  }, []);
+  }, [navigate]);
 
   return (
     <>
@@ -79,7 +79,7 @@ const GamePage = (props: Props) => {
       />
       ) : (
         <>
-          <Animals onHandleShowModal={handleShowModal} photos={photos} />
+          <Animals onHandleShowModal={onHandleShowModal} photos={photos} />
           {error && (
             <div>
               <p className="msgError">{error.message}</p>

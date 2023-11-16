@@ -79,7 +79,7 @@ const Animals = (props: Props) => {
         setTimeout(() => resetTurn(), 1000);
       }
     }
-  }, [selectOne, selectTwo]);
+  }, [onHandleShowModal, selectOne, selectTwo, success, turns]);
 
   return (
     <>
