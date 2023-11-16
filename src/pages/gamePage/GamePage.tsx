@@ -30,7 +30,6 @@ const GamePage = (props: Props) => {
   });
 
   const photos = response?.data.results;
-  console.log(photos);
   const { navigate } = useRouter();
   const [nameUserPrint, setNameUserPrint] = useState("");
   const [showModal, setShowModal] = useState(false);

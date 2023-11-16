@@ -21,11 +21,8 @@ const Defaults = {
 const Animals = (props: Props) => {
   const { onHandleShowModal, photos } = props;
   const [listCards, setListCards] = useState<ListCards[]>();
-  console.log("listCards", listCards);
   const [selectOne, setSelectOne] = useState<ListCards>();
-  console.log("selectOne", selectOne);
   const [selectTwo, setSelectTwo] = useState<any>();
-  console.log("selectTwo", selectTwo);
   const [disabled, setDisabled] = useState(false);
   const [turns, setTurns] = useState(0);
   const [success, setSuccess] = useState(0);
