@@ -35,7 +35,7 @@ const GamePage = (props: Props) => {
   const [nameUserPrint, setNameUserPrint] = useState("");
   const [showModal, setShowModal] = useState(false);
 
-  const onHandleShowModal = () => {
+  const handleShowModal = () => {
     setShowModal(true);
   };
 
@@ -79,7 +79,7 @@ const GamePage = (props: Props) => {
       />
       ) : (
         <>
-          <Animals onHandleShowModal={onHandleShowModal} photos={photos} />
+          <Animals onHandleShowModal={handleShowModal} photos={photos} />
           {error && (
             <div>
               <p className="msgError">{error.message}</p>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 
-axios.defaults.baseURL = process.env.REACT_APP_API;
+axios.defaults.baseURL = 'https://rickandmortyapi.com/api';
 
 const useAxios = (axiosParams: AxiosRequestConfig) => {
   const [response, setResponse] = useState<AxiosResponse>();
@@ -27,7 +27,8 @@ const useAxios = (axiosParams: AxiosRequestConfig) => {
     if(axiosParams.method === "GET" || axiosParams.method === "get"){
       fetchData(axiosParams);
     }
-  },[axiosParams]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[]);
 
   return { response, error, loading, sendData };
 }
