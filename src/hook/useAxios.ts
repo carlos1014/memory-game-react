@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 
-axios.defaults.baseURL = ' https://fed-team.modyo.cloud/api/content/spaces/animals/types/game/entries';
+axios.defaults.baseURL = 'https://rickandmortyapi.com/api';
 
 const useAxios = (axiosParams: AxiosRequestConfig) => {
   const [response, setResponse] = useState<AxiosResponse>();
@@ -15,7 +15,7 @@ const useAxios = (axiosParams: AxiosRequestConfig) => {
     } catch( err ) {
       setError(err as any);
     } finally {
-      setLoading(true);
+      setLoading(false);
     }
   };
 

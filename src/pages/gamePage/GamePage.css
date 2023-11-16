@@ -21,3 +21,17 @@
     font-weight: 900;
     text-transform: uppercase;
 }
+
+.msgError{
+    display: flex;
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.spinner{
+    Display: flex; Justify-content: center; Align-items: center; margin-top: 250px;
+}
