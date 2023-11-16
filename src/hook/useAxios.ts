@@ -15,7 +15,7 @@ const useAxios = (axiosParams: AxiosRequestConfig) => {
     } catch( err ) {
       setError(err as any);
     } finally {
-      setLoading(true);
+      setLoading(false);
     }
   };
 
